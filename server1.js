@@ -11,7 +11,7 @@ app.get('/about', middleware.requireAuthentication, function(req, res){
 	res.send('Information about us!');
 });
 
-var PORT = 3001;
+var PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/public'))
 app.listen(PORT, function(){
 	console.log ('Express web server started OK on port ' + PORT);
