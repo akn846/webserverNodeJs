@@ -16,7 +16,7 @@ var middleware = {
 app.use(middleware.logger);
 // invokde the logic just for specific URI embed the call the to teh function as 2nd parameter
 app.get('/about', middleware.requireAuthentication, function(req, res){
-	res.send('About us!');
+	res.send('Information about us!');
 });
 var PORT = 3001;
 app.use(express.static(__dirname + '/public'))
